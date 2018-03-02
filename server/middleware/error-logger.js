@@ -16,9 +16,9 @@ module.exports = function createErrorLogger(options) {
         err.statusCode = 401;
         err.message = "Autenticación requerida";
         break;
-      default:
+      /*default:
         err.name = "Error";
-        err.message = "Error desconocido";
+        err.message = "Error desconocido";*/
     }
 
     if (req.app.get('env') !== 'development') {

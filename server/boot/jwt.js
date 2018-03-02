@@ -1,19 +1,19 @@
 'use strict';
 const jwt = require('jsonwebtoken');
-const secretKey = process.env.JWT_SECRET_KEY || null;
+const config = require('../config.json');
+const secretKey = config.jwt.secret || null;
 
 module.exports = function(app) {
   const User = app.models.User;
   const AccessToken = app.models.AccessToken;
 
   User.prototype.createAccessToken = function(ttl, cb) {
-    const userSettings = this.constructor.settings;
-    const expiresIn = Math.min(ttl || userSettings.ttl, userSettings.maxTTL);
-
+    const expiresIn = ttl || config.jwt.token_expiration * 60;
+console.log(expiresIn)
     // generate jwt
     const accessToken = jwt.sign({id: this.id, username: this.username, email: this.email,}, secretKey, {expiresIn});
 
-    return cb ? cb(null, Object.assign(this, {accessToken})) : {token: accessToken};
+    return cb ? cb(null, Object.assign(this, {token: accessToken})) : {token: accessToken};
   };
 
   User.logout = function(tokenId, fn) {

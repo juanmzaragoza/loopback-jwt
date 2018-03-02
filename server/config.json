@@ -18,5 +18,10 @@
       "limit": "100kb"
     },
     "cors": false
+  },
+  "jwt": {
+    "secured": false,
+    "secret": "co=542.cpak3e9zxc71",
+    "token_expiration": 10
   }
 }
