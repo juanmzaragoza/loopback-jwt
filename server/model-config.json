@@ -34,5 +34,291 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Auditoria": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "BajasTablaTemporal": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Competencia": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "CompetenciaHistorico": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "DatoEvaluadoEvaluacion": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "DatoEvaluadoEvaluacionHistorico": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "EstadoEvaluacion": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "EstadoEvaluado": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Evaluacion": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "EvaluacionCompetencia": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "EvaluacionCompetenciaHistorico": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "EvaluacionGrupo": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "EvaluacionGrupoHistorico": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "EvaluacionHistorico": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Evaluado": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "GcbaRole": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "GcbaUserRole": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "GcbaUsuario": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "GcbaUsuarioReparticion": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Grupo": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "GrupoHistorico": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "MigrationVersions": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Ministerio": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Periodo": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Rango": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
+  },
+  "Reparticion": {
+    "dataSource": "mysqldbSED",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": true
+        }
+      }
+    }
   }
 }

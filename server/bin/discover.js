@@ -18,32 +18,58 @@ const loopback = require("loopback");
 const ds = loopback.createDataSource("mysqlSED", datasources);
 
 // discover all tables from schema database
-ds.discoverModelDefinitions({schema: "SED", all: true}, (err, models) => {
+// schemma: "table_name_in_database"
+ds.discoverModelDefinitions({schema: "sed_prod", all: true}, (err, models) => {
+
+  log("Staring to discover all tables from schema database...");
+  log("Models: ", models, err);
+
   if (err) {
     end(err);
     return;
   }
   _.forEach(models, (model) => {
+
+    log("Staring to discover schemma:", model);
+
     tables[model.name] = {modelName: "", tableName: model.name, processed: false};
     ds.discoverSchemas(model.name, {all: true, relations: true}, createModel);
   });
+
+  log("End discovering tables from schema database.");
+
 });
 
 let end = (err) => {
   let code = 0;
-  if (err) code = -1;
+  if (err) {
+    console.log("ERROR ON END",err)
+    code = -1;
+  }
   process.exit(code);
 };
 
 let checkListTables = () => {
+
+  log("Staring to check list tables...");
+
   for (let i in tables) {
     let table = tables[i];
+
+    log("Table to check: ", table);
+
     if (table.processed == false) return false;
   }
+
+  log("End check list tables.");
+
   return true;
 };
 
 let createModel = (err, schemas) => {
+
+  log("Starting to create model...");
+
   if (err) {
     logErr(err);
     return;

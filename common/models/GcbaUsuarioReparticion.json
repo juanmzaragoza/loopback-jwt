@@ -1,0 +1,57 @@
+{
+  "name": "GcbaUsuarioReparticion",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sed_prod",
+      "table": "gcba_usuario_reparticion"
+    },
+    "relations": {
+      "fkAf90f84b201fa7e6rel": {
+        "model": "Reparticion",
+        "type": "belongsTo",
+        "foreignKey": "reparticionId"
+      },
+      "fkAf90f84bf0fcae94rel": {
+        "model": "GcbaUsuario",
+        "type": "belongsTo",
+        "foreignKey": "gcbaUsuarioId"
+      }
+    }
+  },
+  "properties": {
+    "gcbaUsuarioId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "gcba_usuario_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "reparticionId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 2,
+      "mysql": {
+        "columnName": "reparticion_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    }
+  },
+  "plural": "gcba-usuario reparticion"
+}

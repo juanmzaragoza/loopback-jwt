@@ -4,13 +4,12 @@
     "connector": "memory"
   },
   "mysqlSED": {
+  	"name": "mysqlSED",
+  	"connector": "mysql",
     "host": "192.168.108.198",
     "port": null,
-    "url": "",
-    "database": "sed_prod",
-    "password": "0000",
-    "name": "mysqlSED",
     "user": "root",
-    "connector": "mysql"
+    "password": "0000",
+    "database": "sed_prod"
   }
 }

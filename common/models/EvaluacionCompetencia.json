@@ -1,0 +1,86 @@
+{
+  "name": "EvaluacionCompetencia",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sed_prod",
+      "table": "evaluacion_competencia"
+    },
+    "relations": {
+      "fkCcab1b169980c34drel": {
+        "model": "Competencia",
+        "type": "belongsTo",
+        "foreignKey": "competenciaId"
+      },
+      "fkCcab1b16e715f406rel": {
+        "model": "Evaluacion",
+        "type": "belongsTo",
+        "foreignKey": "evaluacionId"
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "evaluacionId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "evaluacion_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "competenciaId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "competencia_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "nota": {
+      "type": "String",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 2,
+      "mysql": {
+        "columnName": "nota",
+        "dataType": "decimal",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 2,
+        "nullable": "Y"
+      }
+    }
+  },
+  "plural": "evaluacion-competencia"
+}

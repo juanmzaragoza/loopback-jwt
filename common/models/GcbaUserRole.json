@@ -1,0 +1,57 @@
+{
+  "name": "GcbaUserRole",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sed_prod",
+      "table": "gcba_user_role"
+    },
+    "relations": {
+      "fk5d5f5e19d0379f1rel": {
+        "model": "GcbaRole",
+        "type": "belongsTo",
+        "foreignKey": "gcbaroleId"
+      },
+      "fk5d5f5e19e6137a39rel": {
+        "model": "GcbaUsuario",
+        "type": "belongsTo",
+        "foreignKey": "gcbausuarioId"
+      }
+    }
+  },
+  "properties": {
+    "gcbausuarioId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "gcbausuario_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "gcbaroleId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 2,
+      "mysql": {
+        "columnName": "gcbarole_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    }
+  },
+  "plural": "gcba-user role"
+}

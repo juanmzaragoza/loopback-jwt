@@ -1,0 +1,29 @@
+{
+  "name": "BajasTablaTemporal",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "sed_prod",
+      "table": "bajas_tabla_temporal"
+    },
+    "relations": {}
+  },
+  "properties": {
+    "cuil": {
+      "type": "String",
+      "required": true,
+      "length": 15,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "cuil",
+        "dataType": "varchar",
+        "dataLength": 15,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      }
+    }
+  },
+  "plural": "bajas-tabla temporal"
+}
