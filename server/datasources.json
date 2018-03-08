@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mysqlSED": {
+    "host": "192.168.108.198",
+    "port": null,
+    "url": "",
+    "database": "sed_prod",
+    "password": "0000",
+    "name": "mysqlSED",
+    "user": "root",
+    "connector": "mysql"
   }
 }
