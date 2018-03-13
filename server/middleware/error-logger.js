@@ -1,14 +1,10 @@
+const logger = require('../../common/lib/logger');
+
 module.exports = function createErrorLogger(options) {
   return function logError(err, req, res, next) {
     // your custom error-logging logic goes here
-    console.log("Server error: ",err);
-
-    const status = err.status || err.statusCode;
-    if (status >= 500) {
-      // log only Internal Server errors
-      console.log('Unhandled error for request %s %s: %s',
-        req.method, req.url, err.stack || err);
-    }
+    logger.error('Error %s for request %s %s: %s',
+        err.code, req.method, req.url, err.stack || err);
 
     // handle errors responses
     switch(err.code){

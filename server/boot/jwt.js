@@ -9,7 +9,7 @@ module.exports = function(app) {
 
   User.prototype.createAccessToken = function(ttl, cb) {
     const expiresIn = ttl || config.jwt.token_expiration * 60;
-console.log(expiresIn)
+    
     // generate jwt
     const accessToken = jwt.sign({id: this.id, username: this.username, email: this.email,}, secretKey, {expiresIn});
 
